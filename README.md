@@ -3,6 +3,8 @@ A combined list of helpful awscli commands from Scott Piper's flaws.cloud exerci
 
 AWS Flaws.cloud link: http://flaws.cloud/.
 
+A sample shared credentials [file](credentials), to propely set up profiles for aws cli.
+
 Commands below are listed in order of the exercises:
 
 1. do DNS lookup on the domain you are investigating (ex: **dig [domain.com]**)
