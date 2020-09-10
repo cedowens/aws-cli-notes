@@ -47,11 +47,17 @@ NOTE: cyberduck can also browse a bucket and will determine the region for you
 
 ***Asset Discovery:***
 -Bing: can use "ip:[IP]" to see if a domain has been attached to an IP in the past
+
 -Certificate Transparency Logs: Find interesting hosts
+
 -Shodan: (ex: org: "[org]", ssl: "[company]", net: "[range]", etc.)
+
 -DNS Brute forcing: SecLists repo has some good lists; can use them with Gobuster
+
 -MX Records: Can check results to see where mail is hosted --> for office365 domain.mail.protection.outlook.com, for gsuite google.com or googlemail.com or aspmx.l.google.com, for proofpoint pphosted.com
+
 -other interesting sources: hackertarget.com, threatcrowd.org, dnsdumpster.com, search for ASNs at ARIN/LACNIC/APNIC/RIPE/AFRINIC
+
 -https://github.com/oldrho/ip2provider: feed a list of IPs and it checks the known cloud ranges to see if each IP is hosted in a known cloud provider
 
 
