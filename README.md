@@ -1,5 +1,5 @@
 # aws-cli-notes
-A combined list of helpful awscli commands from Scott Piper's flaws.cloud exercise. 
+A combined list of helpful awscli commands from Scott Piper's flaws.cloud exercise as well as from Beau Bullock's Breaching the Cloud Training 
 
 AWS Flaws.cloud link: http://flaws.cloud/.
 
@@ -17,7 +17,7 @@ Commands below are listed in order of the exercises:
 
 3c. If the host is in AWS but is not a bucket, you may see cloudfront.net in the hostname.
 
-3d. common aws url: **http://[domain].s3.amazonaws.com**
+3d. common aws urls: **http://[domain].s3.amazonaws.com**, **https://s3-[region].amazonaws.com/[name]**
 
 3e. you can also view the url using the aws cli:  **aws s3 ls s3://[bucket name]** (can also include **--profile [profile]** as the first arguments if you want to use a specific profile)
 
@@ -28,6 +28,32 @@ NOTE: cyberduck can also browse a bucket and will determine the region for you
 5. configure a new aws profile locally: **aws configure --profile [new_profile_name]**
 
 6. **aws --profile [profile_name] get-caller-identity** --> find account ID and name of the account
+
+7. **aws sts get-caller-identity** --> returns userID and account number
+
+8. **aws ec2 describe-instances** --region [region]
+
+9. **aws iam list-users**
+
+10. **aws iam list-roles**
+
+***Helpful Recon Tools:***
+-Recon-NG
+-OWASP Amass
+-Spiderfoot
+-Gobuster
+-Sublist3r
+-https://github.com/initstring/cloud_enum --> multi-cloud OSINT tool.
+
+***Asset Discovery:***
+-Bing: can use "ip:[IP]" to see if a domain has been attached to an IP in the past
+-Certificate Transparency Logs: Find interesting hosts
+-Shodan: (ex: org: "[org]", ssl: "[company]", net: "[range]", etc.)
+-DNS Brute forcing: SecLists repo has some good lists; can use them with Gobuster
+-MX Records: Can check results to see where mail is hosted --> for office365 domain.mail.protection.outlook.com, for gsuite google.com or googlemail.com or aspmx.l.google.com, for proofpoint pphosted.com
+-other interesting sources: hackertarget.com, threatcrowd.org, dnsdumpster.com, search for ASNs at ARIN/LACNIC/APNIC/RIPE/AFRINIC
+-https://github.com/oldrho/ip2provider: feed a list of IPs and it checks the known cloud ranges to see if each IP is hosted in a known cloud provider
+
 
 7. **aws --profile [profile_name] ec2 describe-snapshots --owner-id [ownerID]** --> look for ec2 snapshot info
 
