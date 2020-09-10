@@ -51,7 +51,7 @@ NOTE: cyberduck can also browse a bucket and will determine the region for you
 
 17. **aws --profile [profile_name] --region [region] apigateway get-stages --rest-api-id "[ID]"**  ----> get info on stage name and lambda function info
 
-
+18. **aws configure list** ---> show profile info
 
 
 
