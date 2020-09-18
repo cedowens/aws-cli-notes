@@ -84,11 +84,13 @@ NOTE: cyberduck can also browse a bucket and will determine the region for you
 18. **aws configure list** ---> show profile info
 
 ***Trying to find other secrets from secretsmanager with a set of aws creds:***
+
 19. **aws --profile [profile] secretsmanager list-secrets**: want to key on the "Name" values returned
 
 20. **aws --profile [profile] secretsmanager get-secret-value --secret-id "name_value"**: secret is returned in the "SecretString" field
 
 ***Trying to find other secrets from the parameter store:***
+
 21. **aws --profile [profile] ssm describe-parameters**: gets a list of parameter names (each "Name" value is what you want to key on)
 
 22. **aws --profile [profile] ssm get-parameters --names "name1_from_step1_above" "name2_from_step1_above" .... **: gets a list of encrypted secrets for each parameter
