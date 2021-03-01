@@ -97,4 +97,6 @@ NOTE: cyberduck can also browse a bucket and will determine the region for you
 
 23. **aws --profile [profile] ssm get-parameter --name "name" --with-decryption**: returns clear text secret values in "Value" field
 
+24. **aws iam create-login-profile --user-name [unique_uname] --password [pw] --password-reset-required**: example of creating an iam console login profile 
+
 
